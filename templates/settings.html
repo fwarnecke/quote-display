@@ -1,0 +1,102 @@
+<!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="title">Settings</h1>
+                        
+                        <div class="panel panel-default" id="settings-panel">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-lg-4" for="">Animation type</label>
+                                                <div class="col-lg-6">
+                                                    <select class="form-control" name="animation" id="aniTypeSel" form="collect">
+                                                        ~animationOptionLoop~[<option value="{value}"  {selected} >{name}</option>]
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-4" for="">Time for quote to be visible</label>
+                                                <div class="col-lg-4">
+                                                    <input class="form-control" name="time" type="number" min="10" max="300" step="5" value="{time}" form="collect">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-4" for="">Number of quotes displayed simultaneously</label>
+                                                <div class="col-lg-6">
+                                                    <select class="form-control" name="count" id="countSel" form="collect">
+                                                        ~countOptionLoop~[<option value="{value}"  {selected} >{name}</option>]
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-4" for="">Animation duration (sec)</label>
+                                                <div class="col-lg-4">
+                                                    <input class="form-control" id="aniDuration" name="aniDuration" type="number" min="0.5" max="10" step="0.1" value="{aniDuration}" form="collect">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="col-lg-4">Appear after another</label>
+                                                <div class="col-lg-4">
+                                                    <label class="radio-label" for="delay_yes">
+                                                        <input type="radio" id="delay_yes" name="delayed" value="true" form="collect" {delayY_checked}>
+                                                        <span>Yes</span> 
+                                                    </label>
+                                                    <label class="radio-label" for="delay_no">
+                                                        <input type="radio" id="delay_no" name="delayed" value="false" form="collect" {delayN_checked}>
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-lg-4" for="">Text size</label>
+                                                <div class="col-lg-4">
+                                                    <input class="form-control" id="size" name="size" type="number" min="17" max="50" value="{size}" form="collect">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="col-lg-4">Text color quote</label>
+                                                <div class="col-lg-6">
+                                                    <input type="button" class="color-picker form-control">
+                                                    <div class="color-selector">
+                                                        ~colorQOptionLoop~[<input type="radio" id="colorQ-radio-{color_id}" class="color-picker-radio" name="colorQ" value="{color_code}" data-color-name="{color_name}" form="collect" {checked}>
+                                                        <label for="colorQ-radio-{color_id}">
+                                                            <div class="color-preview-big" style="background-color:#{color_code}"></div>
+                                                        </label>]
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="col-lg-4">Text color author</label>
+                                                <div class="col-lg-6">
+                                                    <input type="button" class="color-picker form-control">
+                                                    <div class="color-selector">
+                                                        ~colorAOptionLoop~[<input type="radio" id="colorA-radio-{color_id}" class="color-picker-radio" name="colorA"  value="{color_code}" data-color-name="{color_name}" form="collect" {checked}>
+                                                        <label for="colorA-radio-{color_id}">
+                                                            <div class="color-preview-big" style="background-color:#{color_code}"></div>
+                                                        </label>]
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form-inline pull-right">
+                            <div class="form-group">
+                                <input type="submit" value="Cancel" class="btn btn-defaul pull-right">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary pull-right" form="collect">
+                            </div>
+                        </form>
+                        <form method="post" id="collect"></form>
+                    </div>
+                </div>
+                <!-- /.row -->

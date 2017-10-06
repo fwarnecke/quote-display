@@ -1,0 +1,46 @@
+.color-preview {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 5px;
+    margin-top: 2.5px;
+}
+
+.color-picker-radio {
+    display: none;
+}
+
+.color-preview-big {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #7E7E7E;
+    box-sizing: border-box;
+    margin: -3px;
+    margin-bottom: -8px;
+    z-index: 0;
+}
+
+input[type="radio"]:checked+label .color-preview-big {
+    width: 55px;
+    height: 55px;
+    box-sizing: border-box;
+    margin: -5.5px;
+    margin-bottom: -10.5px;
+    z-index: 1;
+}
+
+.color-selector {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+

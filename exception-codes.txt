@@ -1,0 +1,12 @@
+This file contains all exception codes and there origin.
+Code            Origin                                                  Description
+001             db_sql.class.php: __construct()                         connecting to database failed: probably wrong credentials or database-server not running
+002             db_sql.class.php: getCredentials()                      config-file for credentials is missing neccessary information
+003             db_sql.class.php: getCredentials()                      config-file is missing
+004             template.class.php: loadFile()                          could not find file at given position:wrong directory configured or wrong name given
+005             template.class.php: loadFile()                          no file name given
+006             template.class.php: replace()                           you tried to replace an include-operator: DONT DO IT
+007             template.class.php: replace()                           the given placeholder does not exist in this template
+008             template.class.php: addLoopIteration()                  the given placeholder does not exist in the given loop
+009             template.class.php: addLoopIteration()                  the given loop does not exist in this template
+010             template.class.php: showSite()                          not all placeholder are replaced pls finish contructing template
